@@ -27,6 +27,7 @@ services:
     restart: always
     volumes:
       - mongo_db:/data/db
+      - ./mongo-init:/docker-entrypoint-initdb.d
     ports:
       - "27017:27017"
   
