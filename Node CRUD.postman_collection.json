@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "70a7158d-0938-47dc-9c24-a6524b4a0aea",
+		"name": "Node CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "981849"
+	},
+	"item": [
+		{
+			"name": "Create a User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "testing12@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "Husnain",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Ali",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "8797789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/user?page=1&limit=5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/user/66e967e3550047b779d41896",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"66e967e3550047b779d41896"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a User",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "testing21@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "Husnain",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Ali",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "8797789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/user/66e967e3550047b779d41896",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"66e967e3550047b779d41896"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/user/66e9696b089abd470909957e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"66e9696b089abd470909957e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,4 +1,0 @@
-{
-    "name": "node js app",
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:dev-22"
-}

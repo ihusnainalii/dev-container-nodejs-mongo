@@ -1,0 +1,8 @@
+{
+    "name": "node js app",
+    "dockerComposeFile": ["../../docker-compose.yml"],
+    "service": "app",
+    "shutdownAction": "stopCompose",
+    "workspaceFolder": "/workspace",
+    "forwardPorts": [3000]
+}

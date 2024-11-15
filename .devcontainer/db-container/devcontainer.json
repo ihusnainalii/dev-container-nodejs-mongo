@@ -1,0 +1,8 @@
+{
+    "name": "db container",
+    "dockerComposeFile": ["../../docker-compose.yml"],
+    "service": "mongo_db",
+    "shutdownAction": "stopCompose",
+    "workspaceFolder": "/workspace",
+    "forwardPorts": [27017]
+}
