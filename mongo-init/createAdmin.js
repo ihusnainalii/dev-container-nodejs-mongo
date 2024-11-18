@@ -1,1 +1,1 @@
-db.createUser({ user: "mongoDevContainer", pwd: "password", roles: [ { role: "readWrite", db: "node-crud-app" }, { role: "dbAdmin", db: "node-crud-app" } ] })
+db.createUser({ user: "mongo", pwd: "password", roles: [ { role: "readWrite", db: "node-crud-app" }, { role: "dbAdmin", db: "node-crud-app" } ] })

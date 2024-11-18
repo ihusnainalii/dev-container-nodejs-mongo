@@ -26,6 +26,7 @@ services:
     restart: always
     volumes:
       - mongo_db:/data/db
+      - ./mongo-init/createAdmin.js:/docker-entrypoint-initdb.d/createAdmin.js:ro
     ports:
       - "27017:27017"
   
