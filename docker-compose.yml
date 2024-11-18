@@ -13,8 +13,8 @@ services:
     environment:
       APP_NAME: learn dev containers
       PORT: 3005
-      DB_USER: mongo
-      DB_PASSWORD: password
+      DB_USER: mongoadmin
+      DB_PASSWORD: mongopasswd
       DB_NAME_IP: mongo_db
       DB_PORT: 27017
       DB_NAME: node-crud-app
@@ -25,8 +25,8 @@ services:
     image: mongo:latest
     restart: always
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=mongo
-      - MONGO_INITDB_ROOT_PASSWORD=password
+      - MONGO_INITDB_ROOT_USERNAME=mongoadmin
+      - MONGO_INITDB_ROOT_PASSWORD=mongopasswd
       - MONGO_INITDB_DATABASE=node-crud-app
     volumes:
       - mongo_db:/data/db
