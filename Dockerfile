@@ -5,7 +5,6 @@ COPY ./package.json ./
 COPY ./package-lock.json ./
 RUN npm install
 
-COPY ./mongo-init ./mongo-init
 COPY ./config ./config
 COPY ./controllers ./controllers
 COPY ./model ./model

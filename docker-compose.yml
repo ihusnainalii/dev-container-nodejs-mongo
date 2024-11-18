@@ -12,21 +12,24 @@ services:
       - mongo_db
     environment:
       APP_NAME: learn dev containers
-      PORT: 3002
+      PORT: 3005
       DB_USER: mongo
       DB_PASSWORD: password
       DB_NAME_IP: mongo_db
       DB_PORT: 27017
       DB_NAME: node-crud-app
     ports:
-      - "3002:3002"
+      - "3005:3005"
 
   mongo_db:
     image: mongo:latest
     restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongo
+      - MONGO_INITDB_ROOT_PASSWORD=password
+      - MONGO_INITDB_DATABASE=node-crud-app
     volumes:
       - mongo_db:/data/db
-      - ./mongo-init/createAdmin.js:/docker-entrypoint-initdb.d/createAdmin.js:ro
     ports:
       - "27017:27017"
   
