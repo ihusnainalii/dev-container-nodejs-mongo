@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "70a7158d-0938-47dc-9c24-a6524b4a0aea",
+		"_postman_id": "35e8afc4-8265-4224-a70f-ab1a20963e2a",
 		"name": "Node CRUD",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "981849"
@@ -16,17 +16,17 @@
 					"urlencoded": [
 						{
 							"key": "email",
-							"value": "testing12@gmail.com",
+							"value": "postman+01@gmail.com",
 							"type": "text"
 						},
 						{
 							"key": "firstName",
-							"value": "Husnain",
+							"value": "postman",
 							"type": "text"
 						},
 						{
 							"key": "lastName",
-							"value": "Ali",
+							"value": "test",
 							"type": "text"
 						},
 						{
@@ -37,11 +37,10 @@
 					]
 				},
 				"url": {
-					"raw": "localhost:3000/user",
+					"raw": "{{URL}}/user",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"user"
 					]
@@ -55,11 +54,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/user?page=1&limit=5",
+					"raw": "{{URL}}/user?page=1&limit=5",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"user"
 					],
@@ -83,14 +81,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/user/66e967e3550047b779d41896",
+					"raw": "{{URL}}/user/6737384cb3fc2e012a3b5ab0",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"user",
-						"66e967e3550047b779d41896"
+						"6737384cb3fc2e012a3b5ab0"
 					]
 				}
 			},
@@ -127,14 +124,13 @@
 					]
 				},
 				"url": {
-					"raw": "localhost:3000/user/66e967e3550047b779d41896",
+					"raw": "{{URL}}/user/6737384cb3fc2e012a3b5ab0",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"user",
-						"66e967e3550047b779d41896"
+						"6737384cb3fc2e012a3b5ab0"
 					]
 				}
 			},
@@ -146,18 +142,46 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/user/66e9696b089abd470909957e",
+					"raw": "{{URL}}/user/6704293ce13e692e2c5bd81e",
 					"host": [
-						"localhost"
+						"{{URL}}"
 					],
-					"port": "3000",
 					"path": [
 						"user",
-						"66e9696b089abd470909957e"
+						"6704293ce13e692e2c5bd81e"
 					]
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://0.0.0.0:3002",
+			"type": "string"
 		}
 	]
 }
