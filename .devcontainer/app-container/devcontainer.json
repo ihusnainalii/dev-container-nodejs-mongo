@@ -4,6 +4,5 @@
     "service": "app",
     "shutdownAction": "stopCompose",
     "workspaceFolder": "/workspace",
-    "forwardPorts": [3002],
-    "postStartCommand": "npm start"
+    "forwardPorts": [3002]
 }
